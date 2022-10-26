@@ -1,0 +1,80 @@
+{% extends '../base.html' %} 
+
+<!-- Background color for shabdkosh will be #f8ecc2 -->
+{% comment %} {% load relative_path %} {% endcomment %}
+{% load static %}  
+
+{% block scripts %}
+   <script src="{% static '/js/kosh.js' %}"  type="text/javascript" defer></script>
+{% endblock scripts %}
+
+{% block title%} Gyaandweep | Shabdkosh {%endblock%}
+
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="stylesheet" href="/static/css/kosh.css"> {% endcomment %}
+    <link href="{% static '/css/kosh.css' %}" rel="stylesheet">     
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="main">
+        <div class="not-visible panel">
+        </div>
+        <div class="content">
+            <div class="howto">
+                <center><h3>How to use</h3></center>
+                <p>This dictionary was carefully curated by the team and contains words which are important for day to day use.
+                    We believe in minimal content input, maximum learning output, following the words ,this dictionary will be continually updated
+                     on the basis of search queries and most referred words.
+                    
+                    We have listed around 900 words below and more than 3000 words are uploaded in search queries database.
+                    Each and Every words follows the below described order of understanding.
+                  </p>
+                  <p style="color:#9a3b3b;">ⓔ--This denotes the english conversion of a sanskrit word.</p>
+                  <p style="color:#323286;">ⓜ--This denotes the meaning of the sanskrit word in english.</p>
+                  <p style="color:#246e36;">Ⓖ--This denotes the Paninian grammar varna [group] a word belongs too.</p>  
+            </div>
+            <br />
+            <div class="koshsearch">
+                <form id="search-form" autocomplete="off">
+                    {% csrf_token %}
+                    <input type="text" id="search-input" class="searchbtn" placeholder='Search by word or meaning'>
+                </form>
+            </div>
+            <div class="displaysearch not-visible" id="search-display">
+                {% comment %} <div class="wordunit">
+                    
+                </div> {% endcomment %}
+                <h2>This should appear on clicking on search tab</h2>
+            </div>
+            <div class="words" id="word-list">
+                {% for key,value in kosh_ins.items %}
+                <div class="varn">
+                    <div class="varnid"><h4 id="koshvarnid">'{{key.1}}' वर्ग /'{{key.0}}' group</h4></div>
+                    <div class="row">
+                        {% for b in value %}
+                        <div class="tooltip">
+                            <a class="btn btn-light btn-lg border-secondary" role="button">{{b.sanskt}}</a>&ensp;
+                            <span>
+                                <p style="color:#9a3b3b;">ⓔ {{b.eng}}</p>
+                                <p style="color:#323286;">ⓜ {{b.meaning}}</p>
+                                <p style="color:#246e36;">Ⓖ {{b.gramgp}}</p>
+                            </span>
+                        </div>
+                        {% endfor %} 
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock%}

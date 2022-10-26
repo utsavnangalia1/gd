@@ -1,0 +1,127 @@
+body {
+    background-color: #f8ecc2;
+
+}
+
+.h1 {
+    color: darkred;
+}
+
+.h2 {
+    color: greenyellow;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.panel {
+    display: flex;
+    width: 5%;
+    background-color: #f8ecc2;
+    /* border-color: black; */
+    margin-left: 2px;
+    border-radius: 1rem;
+    background-color: rgba(238, 238, 237, 0.688);
+}
+
+.content {
+    display: flex;
+    width: 95%;
+    margin-inline: 2%;
+    flex-direction: column;
+}
+
+.koshsearch {
+    /* border: 1px solid black; */
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 4px;
+    border-radius: 1rem;
+    background-color: rgba(238, 238, 237, 0.686);
+}
+
+.varn {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+    background-color: rgba(238, 238, 237, 0.677);
+}
+
+.varnid {
+    padding: 1rem;
+    font-weight: bold;
+    /* border: 1px solid; */
+}
+
+#koshvarnid {
+    font-weight: bold;
+}
+
+.howto {
+    /* border: 1px solid black; */
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-radius: 2rem;
+    background-color: rgba(238, 238, 237, 0.688);
+}
+
+.btn {
+    border: 1px solid black;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.row {
+    margin-inline-start: 5px;
+}
+
+/* Tool tip data */
+
+div.tooltip {
+    /* flex-basis: auto;
+    width:100px; */
+    display:inline-flex;
+    position: relative;
+    opacity:1;
+    /*  DO NOT include below two lines, as they were added so that the text that
+          is hovered over is offset from top of page*/
+    /*top: 10em;
+    left: 10em;
+     if want hover over icon instead of text based, uncomment below */
+    /*    background-image: url("../images/info_tooltip.svg");
+              /!* width and height of svg *!/
+              width: 16px;
+              height: 16px;*/
+    
+}
+
+
+div.tooltip span {
+    display: none;
+}
+
+
+/* show and style tooltip */
+
+div.tooltip:hover span {
+    /* show tooltip */
+    display: block;
+    /* position relative to container div.tooltip */
+    position: absolute;
+    bottom: 4em;
+    /* prettify */
+    padding: 0.5em;
+    color: #000000;
+    background: #ebf4fb;
+    border: 0.1em solid #b7ddf2;
+    /* round the corners */
+    border-radius: 0.5em;
+    /* prevent too wide tooltip */
+    max-width: fit-content ;
+}

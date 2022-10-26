@@ -1,0 +1,35 @@
+{% extends '../base.html' %} 
+
+#https://getbootstrap.com/docs/5.2/components/card/
+#The following card feature will be used to write blogs.
+{% block title%} Gyaandweep | Suktam {%endblock%}
+
+{%block content%}
+
+{% comment %} <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>     
+</head>                     {% endcomment %}
+<link rel="stylesheet" href="/static/css/suktam.css">
+
+<body>
+    <div class="suktfull">
+        <div class="suktpnlleft">
+        </div>
+        <div class="suktamfull">
+            {% comment %} {% for  in  %} {% endcomment %}
+            {% comment %} <div class="suktimg">
+                <img src="/static/img/mala_1.jpg">
+            </div> {% endcomment %}
+            {% for i in name_set %}
+            <div class="suktcont" onclick="location.href='/suktam/panch-bhuta-suktam';">
+                <br \>
+                <h3 style="font-weight:800;text-align:left;">{{i.suktam}}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{%endblock%}

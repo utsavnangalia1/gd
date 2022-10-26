@@ -1,0 +1,144 @@
+{% block foo%}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- imported files for shabdkosh carousel in js and css -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"> -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script> -->
+
+
+  {% load static %}
+  <link href="{% static 'css/caro.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body onload="kshow()">
+
+  <div class="kosh">
+    <div class="image-kontainer">
+      <p>6 new words a day, keeps the ignorance away.</p>
+      <div class="image-kwrapper">
+        <div>
+          <img src="/static/Shabdkosh/kosh201.png" id="imgkosh">
+        </div>
+        <div>
+          <img src="/static/Shabdkosh/kosh202.png" id="imgkosh">
+        </div>
+        <div>
+          <img src="/static/Shabdkosh/kosh203.png" id="imgkosh">
+        </div>
+        <div>
+          <img src="/static/Shabdkosh/kosh204.png" id="imgkosh">
+        </div>
+        <div>
+          <img src="/static/Shabdkosh/kosh205.png" id="imgkosh">
+        </div>
+        <div>
+          <img src="/static/Shabdkosh/kosh206.png" id="imgkosh">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br \>
+  <br \>
+  <br \>
+
+
+  <div class="blogs">
+    <div class="gallery">
+      <div class="gallery-tagline" onclick="location.href='blog/';">
+        <p>Start your journey on the path of jnana-yoga</p>
+      </div>
+      <div class="gallery-container">
+        <img class="gallery-item gallery-item-1" src="\static\articles\article1.png" data-index="1">
+        <img class="gallery-item gallery-item-2" src="\static\articles\article2.png" data-index="2">
+        <img class="gallery-item gallery-item-3" src="\static\articles\article3.png" data-index="3">
+        <img class="gallery-item gallery-item-4" src="\static\articles\article4.png" data-index="4">
+        <img class="gallery-item gallery-item-5" src="\static\articles\article5.png" data-index="5">
+      </div>
+      <div class="gallery-controls"></div>
+      {% comment %} <div class="Article-redirect">Click Here to read many more interesting Blogs on Sanatana Dharma.</div> {% endcomment %}
+    </div>
+
+    <div class="auvid">
+
+    </div>
+
+    <script type="text/javascript">
+
+      var kleft = 1;
+      var kright = 3;
+      function kshow() {
+        for (n = kleft; n <= kright; n++) {
+          document.getElementById("c" + n).style.display = "inline-block";
+
+        }
+      }
+
+      function moveleft() {
+        if (kleft <= 3 && kright <= 5) {
+          document.getElementById("c" + kleft).style.display = "none";
+          kleft += 1;
+          kright += 1;
+
+          for (n = kleft; n <= kright; n++) {
+            document.getElementById("c" + n).style.display = "inline-block";
+          }
+        }
+        // else if ((kleft==4) && (kright==6))
+        // {
+        //     kleft=1;
+        //     kright=3;
+        //     kshow();
+        // }
+        else{
+          kshow();
+        }
+
+        }
+      
+
+      // function moveright() {
+      //   if (kleft >= 1 && kright <= 6) {
+      //     document.getElementById("c" + kright).style.display = "none";
+      //     kleft -= 1;
+      //     kright -= 1;
+
+      //     for (n = kleft; i <= kright; n++) {
+      //       document.getElementById("c" + n).style.display = "inline-block";
+      //     }
+
+      //   }
+      //   else
+      //     return;
+      // }
+
+
+    </script>
+    {% load static %}
+    <script src="{% static '/js/carousel.js' %}" type="text/javascript"></script>
+
+</body>
+
+</html>
+{%endblock%}

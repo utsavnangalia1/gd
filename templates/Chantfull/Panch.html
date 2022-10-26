@@ -1,0 +1,46 @@
+{% extends '../base.html' %} 
+
+{% block title%} Gyaandweep | Chants {%endblock%}
+
+{%block content%}
+
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/chantfull/panch.css"> 
+</head>
+<body>
+    <h2 style="margin-left:30px;">Panch Bhuta Suktam</h2>
+    <div class="suktfull">
+        {% comment %} <div class="topbox"></div> {% endcomment %}
+            <!-- <img src="/static/img/scrollfinal.png" id="scrollimg"> -->
+        {% regroup panch by sub_index as subsukt %}
+        {% for sub_index in subsukt %}
+        <div class="subsukt">
+            <h3>{{sub_index.grouper}}</h3>
+            {% for pan in sub_index.list %}    
+            <div class="sukt">
+                {% comment %} <span>{{pan.sub_index}}</span> {% endcomment %}
+                <br \>
+                <div class="sanskrit">
+                    <span style="font-weight:900;">{{pan.smskt}}</span>
+                </div>
+                <br \>
+                <div class="engsukt">
+                    <span>{{pan.engsukt}}</span>
+                </div>
+                <br \>
+                <div class="suktmean">
+                    <span>{{pan.engmean}}</span>
+                </div>
+            </div>
+            <br \>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="rghtpnl">
+    </div>
+</body>
+
+</html>
+{%endblock%}

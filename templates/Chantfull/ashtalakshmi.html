@@ -1,0 +1,39 @@
+{% extends '../base.html' %} 
+
+{% block title%} Gyaandweep | Chants {%endblock%}
+
+{%block content%}
+
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/chantfull/allchants.css"> 
+</head>
+<body>
+    <h2 style="margin-left:30px;">Ashtalakshmi Strotam</h2>
+    <div class="contentfull">
+        {% for ashtstrt in ashlakshmistrt %}
+        <div class="subcontent">  
+                <br \>
+                <div class="contsanskrit">
+                    <span style="font-weight:900;">
+                        <center>{{ashtstrt.strtskt}}</center>
+                    </span>
+                </div>
+                <br \>
+                <div class="contengconv">
+                    <span>{{ashtstrt.strteng}}</span>
+                </div>
+                <br \>
+                <div class="contengmean">
+                    <span>{{ashtstrt.strengmn}}</span>
+                </div>
+            <br \>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="rghtpnl">
+    </div>
+</body>
+
+</html>
+{%endblock%}

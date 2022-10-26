@@ -1,0 +1,116 @@
+{% extends '../base.html' %}
+
+{% block title%} Gyaandweep | Vision {%endblock%}
+
+{%block content%}
+
+{% load static %}
+  <link href="{% static 'css/vision.css' %}" rel="stylesheet">
+  
+<body>
+
+    {% comment %} Copy the below code to display alerts in that page....done for vision-contact here {% endcomment %}
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="main1">
+        <div class="content1">
+            <h2 class="heading"><strong>Our Vision-Inspired by Kundalini </strong></h2>
+            <h3 class="heading1"><strong>Please read from below so you can realise the message. </strong></h2>
+            <div class="Chakras">
+                <div class= "Ch7">
+                    <div class="chakraimg"><img src="/static/img/chakra_top1.png"></div>
+                    <span>Learning from the root to tip of the Kundalini and after realising the self, we are determined to create a bridge between People of Knowledge[Brahmins,Sage & Seers] and Student of Today's World.
+                        With this bridge, we hope that students on the vedic path seek information,Knowledge and Wisdom in their learning with the help of services and features provided by the 
+                        company and receive continous guidance in their path of Yoga.
+                    </span>
+                </div>
+
+
+                <div class= "Ch6">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_7.png"></div>
+                    <span>After realising the purpose of Vishudhi Chakra, we raise our consciousness and reach the Ajna Chakra or Third Eye Chakra.
+                        Ajna literally means a command and represents the Manas[Mind] element. Inspired by this, we perceive that the 21st Century is the 
+                        Indian Century and to lead the way forward, we need to prepare our youth to be skillful in their respective interests.
+                </div>
+
+                <div class= "Ch5">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_6.png"></div>
+                    <span> After realising the purpose of Anahata Chakra, we raise our consciousness and reach the Vishuddhi Chakra or Throat Chakra.
+                        Vishudhi literally means Purifier and represents the Akasha Element. Inspired by this, we are adament in bringing out unbiased 
+                        purified content without any malice or profane language and make our platform the best of Spaces.
+                    </span>
+                </div>
+
+
+                <div class= "Ch4">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_5.png"></div>
+                    <span> After realising the purpose of Manipura Chakra, we raise our consciousness and reach Anahata Chakra or Heart Chakra.
+                        Anahata means "Unstruck Sound" , signifies Love and Compassion and represents Air Element. Inspired by this, we will persevere 
+                        in raising flowing awareness for Vedic Literature with love for the Sanskrit Language and lead the way forward for Bharat being
+                        a "VishwaGuru" with compassion.
+                    </span>
+                </div>
+
+
+                <div class= "Ch3">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_4.png"></div>
+                    <span>After realising the purpose of SvAdthisThAna Chakra, we raise our consciousness and reach Manipura or Navel Chakra.
+                        Manipura Chakra signifies Ambition, Hunger, Nourishment and represents Fire Element. Inspired by this, we are ambitious
+                        in being the best platform for Human Self Development. We are equally devoted in keeping our hunger in check by monitoring the fire in our bellies.
+                    </span>
+                </div>
+
+               
+                <div class= "Ch2">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_3.png"></div>
+                    <span> After Realising the purpose of Muladhara Chakra, we rise above to SvAdthisThAna Chakra or Sacral Chkara. SvAdthisThAna literally 
+                        means "Well Established" and represents Water Element which signifies "Flow". Inspired by this, we are persistent in bringing constant Flow of Content
+                        for the users and later becoming "Well Established" in this vertical.  
+                    </span>
+                </div>
+
+
+                <div class= "Ch1">
+                    <div class="chakraimg"><img src="/static/img/chakraimg_2.png"></div>
+                    <span> Muladhara Chakra or Root Chakra is the feet of the Kundalini where "Mul" means Source and "Adhara" means support. 
+                        So mooladhara literally means "Source Support" and it represents the Earth Element which signifies "Grounding". Inspired by this, we are poised to stay 
+                        grounded in our purpose to become the "Source" of great Vedic Content and Support the learning of Fellow Learners.
+                    </span>
+                </div>
+
+                <div class= "abtfndr">
+                    {% comment %} <span> This platform was founded by Utsav Nangalila and Parv Nangalia @12-July-2022
+                    </span> {% endcomment %}
+                </div>
+            </div>
+
+                <br \>
+                <br \>
+        </div>
+        <div class="contact" >
+                <!-- <h3 style="text-align:center;">Contact Us</h3> -->
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h3><label for="Contact Us">Contact Us</label></h3>
+                    <br \>
+                    <input name="name" type="text" id="name" placeholder="Name"><br \>
+                    <input name="email" type="email" id="email" placeholder="YourName@example.com"><br \>
+                    <input name="phone" type="phone" id="phone" placeholder="Contact No"><br \>
+                    <textarea id="desc" name="desc" rows="4" cols="25" style="max-width=50%" placeholder="Enter Your Message"></textarea>
+                    <br \>
+                    <input type="submit" value="Submit" id="submitbtn"><br \><br \>
+                </form>
+        </div>
+    </div>
+</body>
+{%endblock%}

@@ -1,0 +1,78 @@
+body{
+    background-color: #e8e5db;
+}
+
+.suktfull{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.subsukt{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.subsukt h2{
+    text-align:left;
+}
+
+.sukt{
+    display: flex;
+    width:70%;
+    border-radius: 25px;
+    background-color: aliceblue;
+    font-size: 20px;
+    margin-inline: auto;
+    margin:1%;
+    padding-inline:5%;
+    padding-top: 0.5%;
+    padding-bottom: 1.5%;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+   
+    .suktfull{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+    }
+
+    .subsukt{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    .sukt{
+        display: flex;
+        width:95%;
+        border-radius: 25px;
+        background-color: aliceblue;
+        margin-inline: auto;
+        margin:2%;
+        padding-inline:5%;
+    }
+
+    .sanskrit{
+        font-size: 18px;
+    }
+
+    .engsukt{
+        font-size: 13px;
+    }
+
+    .suktmean{
+        font-size: 14px;
+    }
+
+
+}

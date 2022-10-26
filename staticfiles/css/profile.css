@@ -1,0 +1,24 @@
+.body{
+    background-color: #1372B6;
+}
+
+.pp{
+    display:flex;
+    width:100%;
+    flex-direction: row;
+    margin: 1%;
+    padding: 1%;
+}
+
+.forphotu{
+    width:50%;
+}
+
+.forphotu img{
+    width:inherit;
+}
+
+.cont{
+    width:50%;
+    text-align: center;
+}

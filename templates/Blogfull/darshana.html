@@ -1,0 +1,143 @@
+{% extends '../base.html' %} 
+
+#https://getbootstrap.com/docs/5.2/components/card/
+#The following card feature will be used to write blogs.
+{% block title%} Gyaandweep | Articles {%endblock%}
+
+{%block content%}
+
+{% comment %} <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>     
+</head>                     {% endcomment %}
+<link rel="stylesheet" href="/static/css/blogfull/allblogs.css">
+
+<body>
+    <div class="blogfull">
+        <div class="pnlleft">
+        </div>
+        <div class="contentfull">
+            <div class="blogimghere">
+                <img src="/static/img/Blog/philosophy.png">
+            </div>
+            <div class="bloghashes">
+                <span></span>
+            </div>
+            <div class="blogtitle">
+                <h3 style="font-weight:bold;">How 6 Orthodox Indian Schools of Philosophy govern human thought.</h3>
+            </div>
+            <div class="blogconthere">
+                <span>Philosophy which means 'Love for Knowledge' is termed as Darshana in Indian Literature. 
+                    Darshana means 'Vision of Truth'.Indian philosophy is not a mere metaphysical speculation but a practical guide to human life.
+                    <br \>
+                    <br \>
+                    The teaching and insights were direct experience of the sags and seers who articulated this knowledge.Indian philosophy holds a holistic apporach and differs from western philosophy by a margin. 
+                    It integrates several disciplines like Metaphysics, Logic, epistemology, Sociology , psycology etc.
+                    <br \>
+                    <br \>
+                    Indian philosophy is classified into 2 groups: Orthodox System and Heterodox System.
+                    Orthodox group are those who accept the authority of the Vedas and consider them as sacred lore.
+                    <br \>
+                    This group involves Nyaya,Vaisesika,Samkhya,Yoga,Mimamsa and Vedanta School of thoughts.
+                    <br \>
+                    <br \>
+                    Heterodeox group are those who disregard the validity of the vedas. 
+                    This group involves people thinking on the lines of Jainism, Buddhism and Carvaka Philosophy for the atheist..
+                    <br \>
+                    <br \>
+                    The Orthodox school of thought can be grouped into 3 pairs as, Nyaya and Vaisesika, Samkhya and Yoga , Mimamsa and Vedanta.
+                    Each group are like 2 side of a coin and constitue each other in explaining both sides.
+                    <br \>
+                    <br \>
+                    <br \>
+                    
+                    <span style="font-weight:bold;">Nyaya & Vaisesika / [ न्याय और वैशेषिक]</span>
+                    <br \>
+                    Nyaya and Vaisesika correspond to what we call science in modern times. Nyāya is the fundamental principles of reasoning, which are understood as logic and mathematics. 
+                    Vaiśeṣika corresponds to what we call physics in modern times.
+                    <br \> 
+                    The goal of these two systems of philosophy was to construct the most fundamental foundation to describe the working of the material world.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Nyaya / [ न्याय]</span>
+                    <br \>
+                    Authored by Rishi Gautama, Nyaya is considered as a technique of logical thinking. 
+                    According to Nyaya, valid logical knowledge is defined as the real knowledge which means one knows about the object as it exists.
+                    <br \>
+                    For instance, if it's an animal, like a lion, it's a lion. If it's a bowl, it's a bowl and nothing else.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Vaisesika/ [वैशेषिक]</span>
+                    <br \>
+                    Authored by Sage Kanada, Vaisheshika system is considered as realistic and objective philosophy of Brahman. They believe that all objects of the universe are composed of five elements which are earth, water, air, fire and ether.
+                    They believe that God is the guiding force behind creation and all living beings were rewarded or punished according to the law of karma, 
+                    based on actions of demerit[Paap] and merit[Punya]. 
+                    <br \>
+                    <br \>
+                    Creation and destruction of universe was a cyclical process which took place in agreement with the wishes of Gods. 
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Samkhya & Yoga / [सांख्य और योग]</span>
+                    <br \>
+                    The Sankhya school deals with the study of material elements including the sense objects, the senses[indriyas], the mind[manas], intellect[chitta], ego[ahamkara], morality, 
+                    the nature of time, the material desires of human lives whereas Yoga school incorporates the understanding developed in Samkhya and extends 
+                    it to the understanding of the living body. 
+                    <br \>
+                    It also includes the working of the prana or life force, how the soul is governed by its past habits called gunas,
+                    which create the consequences of actions in our present life called karmas.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Samkhya/ [सांख्य]</span>
+                    <br \>
+                    The Samkhya philosophy holds that reality is constituted of two primary principles, one female[Prakriti] and the other male[Purusha].
+                    Both are independent and absolute in it's truest sense.According to this school of thought, Purusha is mere consciousness, hence it cannot be modified or changed. 
+                    <br \>
+                    Prakriti on the other hand is constituted of three attributes: Thought, Movement and transformation of these attributes which brings about change in all objects. 
+                    <br \>
+                    <br \>
+                    The Samkhya philosophy tries to establish some relationship between Purusha and Prakriti for explaining the creation of the universe.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Yoga/ [योग]</span>
+                    <br \>
+                    If samkhya tries to understand the creation through independent entities of Purusha and Prakriti, Yoga tries to understand them through it's Union.
+                    Yoga literally means union of the two principal entities[Prakriti and Purusha]. It's origin is found in the 196 sutra treatise compiled by Sage Patanjali around 2nd century BC.
+                    <br \>
+                    <br \>
+                    The word Yoga is often understood as physical movement or kriyas but in reality it's just scratching the surface.
+                    There are many kinds of Yoga out of which Karma-yoga, jnana-yoga, astanga-yoga and bhakti-yoga are most studied and practiced during this age.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Mimamsa & Vedanta / [मीमांसा और वेदान्त]</span>
+                    <br \>
+                    “Vedanta” literally means the “conclusion of knowledge”['Veda' is Knowledge and 'anta' is end] which attempts to condense extremely vast and complex ideology into simple and accessible conclusions.
+                    It deals with the nature of reality beyond the brahman, the questions of how this reality creates itself, how living beings enters the material world, and how he can get out of the miseries of the present world.
+                    <br \> 
+                    <br \>
+                    After understanding the conclusions, we have to apply them in our lives. We do this in the forms of questions or self enquiry, trying to identify our dharma and karma.
+                    We ask questions such as, What should the common man and woman do? What is the best method for exiting the life of temporary happiness trying to attain eternal happiness by transcending material existence? 
+                    <br \> 
+                    <br \> 
+                    The Self inquiry into these questions is called Mimansa.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Mimamsa/ [मीमांसा ]</span>
+                    <br \>
+                    Authored by Sage Jaimini, Mimamsa philosophy is analysis of interpretation, application and the use of the texts such as Samhita and Brahmana portions of the Vedas. 
+                    According to Mimamsa philosophy Vedas are eternal and possess all knowledge of creation, and dharma means fulfilment of duties prescibed by the Vedas.
+                    <br \>
+                    <br \>
+                    <span style="font-weight:bold;">Vedanta/ [वेदान्त]</span>
+                    <br \>
+                    Commentaries written by Shankaracharya, Vedanta [literally 'the end of the Vedas or knowledge'] refers to the Upanishads which appeared at the end of each Veda with a direct perception of reality. 
+                    The core message of Vedanta is that every action must be governed by the intellect which is our guiding facility.
+                    <br \>
+                    <br \>
+                </span>    
+            </div>
+        </div> 
+    </div>
+</body>
+{%endblock%}

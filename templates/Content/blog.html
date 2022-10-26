@@ -1,0 +1,162 @@
+{% extends '../base.html' %} 
+
+#https://getbootstrap.com/docs/5.2/components/card/
+#The following card feature will be used to write blogs.
+{% block title%} Gyaandweep | Articles {%endblock%}
+
+{% comment %} 
+
+            Profound learning :
+            
+    ->  html and body tag : compiler interprets the entire code into its predefined formats[body,head,html] even if not used explicitly.
+    ->  images only moves along the y-axis, to make it responsive adjust the height ONLY[width doesn't move].  
+
+
+    -> What is the difference between a suktam, strotam, shloka, mantra ,sutra?
+
+    -> A vedic hymn which is derived from Vedas are called Suktam.
+
+    -> A The literal meaning of Sutra is a string. Yogis who have realised that sutra can interpret that sutra in there own words.
+    The string which holds the words or the core concept of the topic together remains same.
+    
+    ->A shloka is any type of rythmic verse.It can be derived from a story, a song, a hymn or any book according to the yogi.
+        if words are arranged in a particular order or poetic meter, it's called a shloka.
+
+        eg. Vakratunda mahakaya, Saraswati namastubhyam or verse from chanakya neeti are shlokas'.
+
+    ->Mantras are phrases which have a deep spiritual significance.
+
+    Etymology of Mantra comes from the phrase "Mananat trayate iti mantrah" 
+        means That which delivers upon repeated Chanting.
+
+
+    ->Strotas, Shlokas, Sutras can be expounded upon, understood and relished for there meaning, 
+    Mantras are experienced, used and worked upon to reach higher possibilities of life.
+
+    ->A stuti or Stotra is a verse which is in praise of someone or something.
+        Strotas are group of shlokas put together.
+
+        There are various names for strotas such as, Panchakam if there are 5 shlokas,
+        shatakam for 6 shlokas, ashtakam for 8 shlokas , dashakam for 10 shlokas and so on...
+    
+
+{% endcomment %}
+
+{% load static %}
+
+{% block scripts %}
+   <script src="{% static '/js/blog.js' %}"  type="text/javascript" defer></script>
+{% endblock scripts %}
+
+
+{%block content%}
+
+{% comment %} <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>     
+</head>                     {% endcomment %}
+<link href="{% static '/css/blog.css' %}" rel="stylesheet">
+
+
+{% comment %} This is to dynamically add images in the htmls pages from server {% endcomment %}
+{% comment %} <img src ="{% static 'myapp/' %}{{user.first_name}}_{{user.last_name}}.jpg" alt="Profile Picture"> {% endcomment %}
+
+<body>
+    <div class="blogmain">
+        <div class="lftnvpnl">
+        </div>
+        <div class="contentartc">
+            <div class="hashdisp" id="hashtag-display">
+            </div>
+            <div class="blogdisp" id="blog-display">
+                {% for each1 in blog %}
+                <div class="contenttb" >
+                    <div class="bloghashes">
+                        <div><p>#{{each1.hashtag}}</p></div>&emsp;&emsp;&emsp;
+                        <div class="samay"><i class="fa fa-clock-two"></i> {{each1.read_time}} mins read</div>
+                        {% comment %} <div><span onclick="bookmarkfunc">
+                            
+                            > 
+
+                            
+                            <i class="fa fa-thin fa-bookmark" style="padding-top:2px;"></i></span></div> {% endcomment %}
+                    </div>
+                    <div class="blogdata">
+                        <div class="blogcont">
+                            <h3 style="font-weight:bold;" onclick="location.href='{{each1.link}}';">{{each1.title}}</h3>
+                            <p><span style="white-space: pre-line;">{{each1.desc}}</span></p>
+                        </div>  
+                        <div class="blogimg" >
+                            <img src="\static\img\Blog\{{each1.img}}">
+                        </div> 
+                    </div>
+                    <div class="lwrpnl">
+                        <div><span onclick="bookmarkfunc"><i class="fa fa-thin fa-bookmark" style="padding-top:2px;"></i></span></div>
+                        <div class="author">{{each1.date_uploaded | date:"F d Y"}} | by <strong>{{each1.author_name}}</strong></div>
+                    </div>
+                </div>  
+                {% endfor %}
+            </div>
+        </div> 
+
+        <div class="blogtags">
+            <div class="row">
+                <div class="not-visible" id="clear">
+                <a style="background-color:red;" name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="./" type="button">Clear X</a>&nbsp;
+                </div>
+                <div id='filter-form'>
+                <form id="search-blog" autocomplete="off">
+                    {% csrf_token %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Strotam">&nbsp; {% endcomment %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="japamala">&nbsp; {% endcomment %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Puranas">&nbsp; {% endcomment %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Suktam">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Atharvaveda">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Upanishad">&nbsp; {% endcomment %
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="SuTantra/Technology">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Vastu-Vidya/Engineering">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Artha-Sastra/Management">&nbsp; 
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Vedas">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Upavedas">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Yoga">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Itihas">&nbsp;{% endcomment %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Vedangas">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Ayurveda">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Jyotisha">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Lord Shiva">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Lord Vishnu">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Yantra">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Nakshatra">&nbsp; 
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Dhyana">&nbsp;
+                    {% endcomment %}
+                    {% comment %} <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Rashi">&nbsp; 
+                    
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Chakra">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Nadis">&nbsp;
+                    <input name="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="submit" value="Lokas">&nbsp;{% endcomment %}
+
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Dhyana">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Lord Shiva">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Lord Vishnu">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Shastra">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Vedas">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Nadis">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Upavedas">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Yoga">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Itihas">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Lokas">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Navdurga">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Gurukul">&nbsp;
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Philosophy">&nbsp;  
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Eclipses">&nbsp; 
+                    <input id="hashtag" class="btn btn-light btn-lg border-secondary listWord" href="" type="button" value="Deepavali">&nbsp;    
+                </form>
+                </div>
+            </div>    
+            <div class=""></div>
+        </div>
+    </div>
+</body>
+{%endblock%}

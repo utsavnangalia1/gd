@@ -1,0 +1,78 @@
+
+{% comment %} {% block title%} Gyaandweep | Shabdkosh {%endblock%} {% endcomment %}
+{% load static %}
+    <link href="{% static 'css/login.css' %}" rel="stylesheet">
+
+<!DOCTYPE html>
+<head>
+        <title>Gyaandweep | Login/Signup</title>
+</head>
+<body>
+    {% comment %} <div class="tag"></div> {% endcomment %}
+    <div class="backtohome" onclick="location.href='/';">
+        <img src="/static/img/logo_final.png">
+        <p style="font-size:large;-webkit-text-stroke: medium;">Go back to homepage</p>
+    </div>
+    </div>
+    <div class="cont">
+        <div class="form sign-in">
+            <form method="get" action='' id='SignIn'>
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="SignIn">
+                <h2>Welcome</h2>
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="siname">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="sipass">
+                </label>
+                <p class="forgot-pass">Forgot password?</p>
+                <button type="Submit" class="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="sub-cont">
+            <div class="logimg">
+                <div class="img__text m--up">
+                    
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__text m--in">
+                
+                    <h3>If you already have an account, please sign in.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Sign In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <form method="post" action='/login/' id='Signup'>
+                    {% csrf_token %}
+                    <input type="hidden" name="form_type" value="SignUp">
+                    <h2>Create your Account</h2>
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="suname">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="suemail">
+                    </label>
+                    <label>
+                        <span>Password</span>
+                        <input type="password" name="supass">
+                    </label>
+                    <button type="Submit" class="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script> 
+</body>
+</html>

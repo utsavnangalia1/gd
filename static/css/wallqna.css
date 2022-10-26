@@ -1,0 +1,273 @@
+.wallmain{
+    display: flex;
+    width: 100%;
+    padding-inline:1%;
+}
+
+.wallpanel{
+    display:flex;
+    width: 15%;
+    margin-inline: 30px;
+    /* border: 2px solid black; */
+    padding-inline:1px;
+}
+
+.wallsearch{
+    display:flex;
+    width:50%;
+    margin-left: 100px;
+    padding-inline: 10px;
+}
+
+.not-visible{
+    display:none;
+}
+
+.wallcontent{
+    display: flex;
+    width: 100%;
+    /* border: 2px solid black; */
+    flex-direction: column;
+}
+
+#add{
+    font-size:40px;
+    margin-top:10%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+input[class=hashtag]{
+    width:40%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#filter{
+    font-size:40px;
+    margin-top:10%;
+}
+
+input[class=question]{
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    /* border: 2px solid grey; */
+    border-radius: 10px;
+  }
+
+.searchtab .searchbtnqna{
+    padding:10px;
+    width:350%;
+	font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    border-radius: 10px;
+}
+
+.searchbtnqna:focus{
+    background-color: lightgray;
+}
+
+.searchtab {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-bottom: 4px;
+    border-radius: 40px;
+    /* background-color: rgba(238, 238, 237, 0.686); */
+
+}
+
+.wallqna{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.hash{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4px;
+
+}
+
+#heart{
+    color:grey;
+}
+
+#heart:active{
+    color:rgb(9, 246, 60);
+}
+
+#flag{
+    color: grey
+}
+
+#flag:active{
+    color:rgb(232, 112, 14);
+
+}
+
+.wallhash{
+    display: inline;
+}
+
+.wallbtn{
+    display: inline;
+}
+
+.unit{
+    display:block;
+    width: max-content;
+    margin: 1%;
+    padding: 1%;
+    border: 2px double rgb(240, 56, 56);
+    border-radius: 15px ;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.ques{
+    margin-bottom:3px;
+    margin-top: 7px;
+}
+
+.ans{
+    margin-bottom:3px;
+    margin-top: 3px;
+}
+
+.ques span{
+    font-size:20px;
+
+}
+
+.ans span{
+    font-size:16px;
+}
+
+/* this styling is for pop-up ask question div */
+
+#add-question {
+	display: none;
+	background-color: rgba(0, 0, 0, 0.681);
+	position: absolute;
+	height: 100vh;
+	width: 98%;
+}
+
+.askques {
+	position: relative;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #fbead8;
+	width: 50%;
+	top: 5vh;
+    border-radius: 1.5em;
+    border: 2px solid black;
+}
+
+input[type=submit]{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding:8px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+
+.close-button{
+    display:flex;
+    justify-content:right;
+    /* background-color: rgb(255, 108, 108);
+    border-radius: 50%;
+    color:black;
+    padding-inline:4px;
+    border: 2px black solid; */
+    cursor: pointer;
+}
+
+.close-button span{
+    display:block;
+    background-color: rgb(255, 108, 108);
+    border-radius: 50%;
+    color:black;
+    padding-inline:6px;
+    border: 2px black solid;
+}
+
+#submitbtn{
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    #add{
+        font-size:30px;
+        margin-top:50%;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+
+    #filter{
+        font-size:30px;
+        margin-top:50%;
+    }
+
+    .wallsearch{
+        display:flex;
+        width:90%;
+        margin-left: 20px;
+        padding-inline: 10px;
+    }
+
+    .searchtab {
+        border: 1px solid black;
+        display: flex;
+
+    }
+
+    .searchtab .searchbtnqna{
+        padding:10px;
+        width:100%;
+    }
+
+    .unit{
+        display:block;
+        width: 400px;
+        margin: 1%;
+        padding: 1%;
+        border: 1px double rgb(240, 56, 56);
+        border-radius: 15px ;
+
+    }
+
+    .ques span{
+        font-size:1.5rem;
+
+    }
+
+    .ans span{
+        font-size: 1.5rem;
+    }
+
+    .askques{
+    background-color: #fbead8;
+	width: 80%;
+	top: 25vh;
+    border-radius: 1.5em;
+    }
+}

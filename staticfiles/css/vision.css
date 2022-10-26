@@ -1,0 +1,170 @@
+body {
+    /*
+    background-image: url("/static/img/Behongo.jpg");
+    background-repeat: no-repeat;
+    object-fit: none;
+    background-position: center;
+    background-attachment: scroll;
+    color: aliceblue;
+     */
+    /* for making bg image responsive */
+    /* background: url("/static/img/Behongo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+    width: 100%;
+    background-color: rgb(188, 247, 204);
+    color:black;
+}
+
+/* .navbar{
+    color: white;
+}
+
+.pogo{
+    color: white;
+} */
+
+
+.main1{
+    display: flex;
+    width: 100%;
+    /* margin: 1%;
+    padding: 1%;
+    border: 2px solid rgb(255, 0, 0); */
+    flex-direction: column;
+
+
+}
+
+.contact{
+    display: block;
+    width:50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 4em;
+    padding: auto;
+    border: 2px solid black;
+    border-radius: 2em;
+    background-color: rgba(105, 105, 105, 0.271);
+}
+
+.vipanel{
+    width:30%;
+    margin: 2%;
+    border: 3px solid black;
+}
+
+.panelimg{
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.tagline{
+    text-align: center;
+    /* border: 1px solid black; */
+    font-family: fantasy;
+    line-height: 1.5em;
+
+}
+
+.heading{
+    /* border: 1px solid black; */
+    margin: 0;
+}
+
+.content1{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2%;
+    padding: 2%;
+    /* border: 6px solid black; */
+    background-color: rgba(226, 235, 226, 0.979);
+    border-radius: 2rem;
+}
+
+.Chakras{
+    display: flex;
+    margin-top: 20px;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+}
+
+.chakraimg{
+    display: inline-flex;
+    width:150px;
+    height:100px;
+    margin-right: 2%;
+    /* border: 2px solid red; */
+
+}
+
+.chakraimgtop{
+    display: inline-flex;
+    height: 140px;
+    margin-right: 2%;
+}
+
+.Ch7{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+
+}
+
+.Ch6{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.Ch5{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.Ch4{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.Ch3{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.Ch2{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.Ch1{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.abtfndr{
+    display:inline-flex;
+    margin: 2%;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+@media(max-width: 768px){
+    
+}

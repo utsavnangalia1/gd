@@ -1,0 +1,102 @@
+
+.phulbody{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.panelforimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    /* border: 1px solid red; */
+}
+
+.panelforimg img{
+    height: 250px;
+}
+
+.panelforcont{
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    /* border: 3px solid blue; */
+}
+
+.analytics{
+    display: flex;
+    /* border: 3px solid yellow; */
+}
+
+.shruti{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    width:50%;
+    /* border: 2px solid green; */
+    align-items: center;
+}
+
+.shruti img{
+    width:350px;
+    margin-bottom: 20px;
+}
+
+.shruti h2{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.smriti h2{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.smriti{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    width:50%;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+
+
+.smriti img{
+    width:350px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px){
+
+    .phulbody{
+        width:100%;
+    }
+
+    .shruti{
+        width:100%;
+    }
+
+    .shruti img{
+        width:200px;
+    }
+
+    .smriti{
+        width:100%;
+    }
+
+    .smriti img{
+        width:200px;
+    }
+    
+    .analytics{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,146 @@
+body{
+    background-color: white;
+}
+
+
+.chantmain{
+    /* margin-top: 128px; */
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    margin-inline: auto;
+}
+
+.blogscroll{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+#scrollimg{
+    object-fit: fill;
+}
+
+.vedicvaani{
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    flex-direction: row;
+    border-radius: 25px;
+    background-color: rgb(247, 242, 242);
+}
+
+.Headtag p{
+    width:100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20px;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    padding: 2%;
+    opacity: 0.6;
+    justify-content:center;
+    font-size: 50px;
+    text-shadow: 0 0 20px rgb(97, 80, 28);
+    text-align: center;
+    color: white;
+    border-radius: 25px; 
+}
+
+.cont:hover{
+    opacity: 1;
+}
+
+.suktimg{
+    background: url("/static/img/suktam.jpg") no-repeat;
+    background-size: cover;
+}
+
+.strtimg{
+    background: url("/static/img/strotam.jpg") no-repeat;
+    background-size: cover;
+}
+
+.shlkimg{
+    background: url("/static/img/shloka.jpg") no-repeat;
+    background-size: cover;
+}
+
+.mantimg{
+    background: url("/static/img/mantra.jpg") no-repeat;
+    background-size: cover;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 2%;
+    width:48%;
+    height: 300px;
+    font-size: 30px;
+    color: Black;
+    align-items: left;
+}
+
+.links a{
+    cursor: pointer;
+}
+
+
+@media(max-width: 768px)
+{
+    .chantmain{
+        width:95%;
+    }
+
+    .vedicvaani{
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+
+    .Headtag p{
+        width:100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1 rem;
+    }
+
+    .cont{
+        width: 100%;
+        opacity: 1;
+    }
+
+    .suktimg{
+        height:200px;
+    }
+
+    .strtimg{
+        height:200px;
+    }
+
+    .shlkimg{
+        height:200px;
+    }
+
+    .mantimg{
+        height:200px;
+    }
+
+    .links{
+        width:100%;
+        height:auto;
+    }
+    .links a{
+        font-size: 2rem;
+    }
+
+}

@@ -1,0 +1,44 @@
+.wallmain{
+    display: flex;
+    width: 100%;
+}
+
+.wallpanel{
+    width: 5%;
+    border: 2px solid black;
+}
+
+.wallcontent{
+    display: flex;
+    width: 95%;
+    border: 2px solid black;
+    flex-direction: column;
+
+}
+
+.wallsearch{
+    border: 1px solid black;
+    margin: 1%;
+    padding: 1%;
+}
+
+.wallqna{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.hash{
+    display: inline;
+}
+
+.unit{
+    display:block;
+    width: max-content;
+    margin: 1%;
+    padding: 1%;
+    border: 2px double rgb(240, 56, 56);
+    border-radius: 15px ;
+    font-size: 2rem;
+    color: black;
+}

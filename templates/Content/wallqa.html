@@ -1,0 +1,98 @@
+{% extends '../base.html' %}  
+
+{% comment %} #This HTML Page is dedicated to make our portal more user interactive. In this we will ask and answer question based on Sutra Style.
+#That means, 1 Line question and 1 line answer. The Q & A will be shown in bullet style with a like and comment feature.
+
+#We will segment all Q & A on the basis of disciplines. Like #Yoga, #Ayurveda, #Mahabharata, as so on.... {% endcomment %}
+
+{% load static %}
+
+{% block scripts %}
+   <script src="{% static '/js/wallqa.js' %}"  type="text/javascript" defer></script>
+{% endblock scripts %}
+
+{% block title%} Gyaandweep | Q n A {%endblock%}
+
+{%block content%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="stylesheet" href="/static/css/wallqna.css"> {% endcomment %}
+    <link href="{% static '/css/wallqna.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="wallmain">
+         <div class="wallcontent">
+            {% comment %} <div class="howto">
+                <center><h1>How to</h1><center>
+                <p>this will contains the guide to use the shabkosh</p>
+            </div> {% endcomment %}
+            <br \>
+            {% comment %} <h4>#This HTML Page is dedicated to make our portal more user interactive. In this we will ask and answer question based on Sutra Style.
+                #That means, 1 Line question and 1 line answer. The Q & A will be shown in bullet style with a like and comment feature.
+            </h4> {% endcomment %}
+            <br \>
+            <div id="add-question">
+                <div class="askques">
+                    <div class="close-button"><span id="close">x</span></div>
+                    <form method="POST" id="addques" autocomplete="off">
+                        {% csrf_token %}
+                        <input class="hashtag" type="text" name="hashtag" id="hashtag" placeholder="Give a hashtag (optional)"><br \>
+                        <input class="question" type="text" name="question" id="question" placeholder="Enter your question"><br \>
+                        <div style="display:flex;justify-content:center;"><input type="submit" value="Submit" id="submitbtn"><br \></div>
+                    </form>
+                </div>
+            </div>
+            <div class="searchtab">
+                {% comment %} <h4 align="center">Space left for search bar</h4> {% endcomment %}
+                <div class="wallpanel">
+                    {% comment %} <img src="/static/img/visionpan.png"> {% endcomment %}
+                    <div class="add"><i id="add" class="fa fa-plus"></i></div>&nbsp;
+                    <div class="filter"><i id="filter" class="fa fa-filter fa-light"></i></div>
+                </div>
+                <div class="wallsearch">
+                    <form id="search-form_qna" autocomplete="off">
+                    {% csrf_token %}
+                    <input type="text" id="search-input_qna" class="searchbtnqna" placeholder="Search by events or keywords">
+                    </form>
+                </div>
+            </div>
+            <br \>
+            <div class="search-display_qna">
+
+            </div>
+            <div class="wallqna">
+                {% for qna in qna_ins %}
+                <div class="unit">
+                    <div class="hash">
+                        {% comment %} {{qna.serial}}.      <i id="heart" class="fa fa-heart"></i> &nbsp;    {% endcomment %}
+                        <div class="wallhash"> #{{qna.hashtag}} </div>
+                        <div class="wallbtn">&nbsp; <i id="flag" class="fa fa-flag"></i></div>
+                    </div>
+                    <div class="ques">
+                        <span style="font-weight:bold;">Q. {{qna.question}}?</span>
+                    </div>
+                    <div class="ans">
+                        <span>A. {{qna.answer}}.</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</body>
+{%endblock%}

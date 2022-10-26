@@ -1,0 +1,155 @@
+body{
+    background-color: #fafafa;
+}
+
+.pp{
+    /* display:inline-flex; */
+    /* margin-top: 128px; */
+    display:flex;
+    width:100%;
+    /* flex-direction: row; */
+    border: 2px solid black;
+}
+
+.pppanel{
+    width:20%;
+    display:flex;
+    position: fixed;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+    padding:10px;
+    margin-top: 1.5%;
+    padding-left: 20px;
+    font-size: 22px;
+}
+
+.pppanel > span{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+.ppcont{
+    width:60%;
+    display:flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    padding: auto;
+    margin-left: 22%;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+
+.subtopic{
+    display:flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    padding: auto;
+    margin-bottom: 50px;
+}
+
+.picpf{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 2%;
+}
+
+.picpf img{
+    width:200px;
+}
+
+.flname{
+    display:flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-inline: 4%;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 8px;
+  }
+
+input[type=submit]{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+  
+.picpf button{
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.forphotu{
+    width:50%;
+}
+
+.forphotu img{
+    width:inherit;
+}
+
+.cont{
+    width:50%;
+    text-align: center;
+}
+
+.subtopic > div > div > ul{
+    padding-left: 4%;
+}
+
+.subtopic > div > div > ul > li{
+    list-style:initial;
+    text-align:initial;
+}
+
+.paddingforpriv{
+    padding-left:2%;
+}
+
+.paddingforpriv > p{
+    padding-left:2%;
+}
+
+.mainpaddin{
+    padding:1%;
+}
+
+.ini > ul > li{
+    list-style:initial;
+    text-align:initial;
+}
+
+.ini > ul {
+    padding-left: 4%;
+}
+
+.ini > p {
+    padding-left: 2%;
+}
+
+
+.ini > h3 {
+    padding-left: 2%;
+}
+
+#more ,#more2, #less, #less2{
+    cursor:pointer;
+}

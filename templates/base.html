@@ -1,0 +1,186 @@
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- add icon link for website in chrome tab -->
+  <link rel = "icon" href = "/static/img/logo_final.png">
+
+  <title>{% block title%} {%endblock%}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/static/css/base.css"> <!--manually included base.css file from local dir-->
+  <!-- <link rel="stylesheet" href="/static/css/vision.css"> -->
+
+
+
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="gdnavbar" >
+    <!-- LOGO -->
+    <div class="logo" onclick="location.href='/';">
+      <div class="logoimg"><img src="/static/img/logo_final.png" id="logoimg1"></div>
+      <div class="headin"><span>GyaanDweep</span></div>
+      <!-- <span class="tooltiptext">Go to Homepage</span> -->
+    </div>
+    <!-- NAVIGATION MENU -->
+    <div class="pogo">
+      <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li class="Learn ">
+              <p>Learn <span style="font-size:20px;">&#9660;</span></p>
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="/kosh">ShabdKosh</a></li>
+                <li><a href="/blog">Articles</a></li>
+                <li><a href="/chants">Chants</a></li>
+              </ul>
+            </li>
+            <li><a href="/wallqa">Wall of Q & A</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/vision">About Us</a></li>
+            {% comment %} <li><a href="/profile">Profile</a></li>  {% else %} profiledrop {% endcomment %}
+            <li class="profile">
+              <a href="/login"><i class="fa fa-regular fa-user"></a></i>
+              <ul class="{% if user.is_anonymous %} anonymous {% else %} profiledrop {% endif %}">
+                <li><a href="/Analytics">Progress</a></li>
+                <li><a href="/setting">User Setting</a></li>
+                <hr class="solid">
+                <li style="padding-top:0px;padding-bottom:0px;"><a href="/logout" style="color:#001d89;">
+                    <p>Logout &nbsp;<i class="fa fa-sign-out" style="font-size:30px"></i></p>                  
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </div>
+      </ul>
+    </div>
+  </div>
+  <hr class="hdrline" style="margin:0px;" >
+
+  {% block content %}
+
+  {% endblock%}
+
+  <button onclick="topFunction()" id="gdBtn" title="Go to top"><span>Back to Top&ensp;</span><i class="fa fa-arrow-up"></i></button>
+  
+
+  <footer class="footer">
+    <div class="outer container-fluid bottom_border">
+      <div class="row" style="justify-content:space-between; margin-left:28px">
+        <div class=" row col-xs-0.5"></div>
+        <div class="row col-lg-4">
+          <h5 class="headin5_amrc col_white_amrc pt2" style="font-weight:800;">About GyaanDweep</h5>
+          <!--headin5_amrc-->
+          <p class="mb10">GyaanDweep is a one-stop Platform </i> for the world where we explore interactive &
+            extensive discoveries with knowledge on Scientific as well as Spiritual disciplines which existed in the Vedic Era.
+            This
+            initiative is a step forward in bringing the divine knowledge & practices to light and making bharat a
+            vishwaguru. We are
+            striving to raise awareness among people in our quest to make Bharat Aatmanirbhar and lead the way forward
+            for a better world.</p>
+          <p><i class="fa fa-location-arrow"></i> Indore, India </p>
+          <p><i class="fa fa-phone"></i> +91-8527845862 </p>
+          <p><i class="fa fa fa-envelope"></i> support@gyaandweep.com </p>
+        </div>
+
+        <div class=" row col-xs-1"></div>
+
+        <div class=" row col-lg-3">
+          <h5 class="headin5_amrc col_white_amrc pt2" onclick="location.href='blog/';" style="font-weight:800;" >Quick Links- Articles/ लेख</h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/blog/Vedas/";>Vedas/ वेद्</a></li>
+            <li><a href="/blog/showblog/">Dhyana/ ध्यान्</a></li>
+            <li><a href="/blog/darshana/">Philosophy/ दरशन्</a></li>
+            <li><a href="">Itihasa/ इतिहास</a></li>
+            <li><a href="/blog/edufath">STEM/ शास्त्र</a></li>
+            <li><a href="/blog/yogasutra/">Yoga/ योग </a></li>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+        <div class=" row col-xs-1"></div>
+
+        <div class=" row col-lg-3">
+          <h5 class="headin5_amrc col_white_amrc pt2" onclick="location.href='chants/';" style="font-weight:800;">Quick links- Chants / वेदो कि वानि </h5>
+          <!--headin5_amrc-->
+          <ul class="footer_ul_amrc">
+            <li><a href="/mantra/ganesh-atharva/">Sri Ganesh Atharvashirsham/ श्री गणेश् अथर्वशिर्षम्</a></li>
+            <li><a href="/suktam/sri-suktam/">Sri Suktam/ श्री सुक्तम् </a></li>
+            <li><a href="/strotam/shiva-tandava">Shiva Tandava Strotam/ शिव ताडव् स्तोत्रम्</a></li>
+            <li><a href="/strotam/saraswati-strotam/">Sri Saraswati Strotam/ श्री सरस्वति स्तोत्रम् </a></li>
+            <li><a href="/shlokas/lakshmi-aarti">Sri Lakshmi Aarti/ श्री लक्ष्मी आरती</a></li>
+            <li><a href="/shlokas/hanuman-chalisa/">Hanuman Chalisa/ हनुमान चालीसा</a></li>
+          </ul>
+          <!--footer_ul_amrc ends here-->
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <!--foote_bottom_ul_amrc ends here-->
+      <p class="text-center">Copyright @2022 | Designed With Sankalpa at <a href="#">Gyaandweep</a></p>
+
+      <ul class="social_footer_ul">
+        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+    </div>
+
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  {%block scripts%}
+  {% endblock %}
+
+  <script>
+    let gdbutton = document.getElementById("gdBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        gdbutton.style.display = "block";
+        
+      } else {
+        gdbutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+
+  </script>
+
+</body>
+
+</html>
