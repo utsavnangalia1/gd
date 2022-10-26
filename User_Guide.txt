@@ -1,0 +1,194 @@
+1st Iteration,
+Written on 03-08-2022.
+
+This Guide is written for easy understanding of all work flows, decisions through discussions(DTDs), nomenclature of folders and files in this project.
+
+Let's Start with the Ideas comsidered behind names of folders and there corresponding feautures.
+
+GyaanDweep Folder is the Primary folder or first folder created in this project through "startproject".
+It is the only folder with "settings.py" file. 
+
+The Urls requested in the url tab on internet is send as request to urls.py in the GyaanDweep folder. From there, request is routed to various HTMls
+and others apps  urls.py files which we build.
+
+The below 3 folders are 3 separate apps for the primary function GyaanDweep and responsible for 3 separate feature which will be collectively 
+integrated into the platform.
+
+1 Folder: bhrm
+Bhrm is short of Brahma or Brahma Dev who is considered as one of the Trimurti of hindu pantheon.
+Brahma is responsilble for Creation and often termed as "The Generator" of the all Universe which sprang from his consciousness and are a product of his mind.
+
+Hence, brahma will be responsible for all the content which will be generated on the Platform.
+Content will be added by gyandweep team and Users, which means, user will be given power to add or edit his personal content and will be able to see and play around with
+content on the platform. (s)he can add, save and work with the content on his own personal profile.
+Images by team would be added through static_root and users uploaded content will be added to platform using media_root features.
+
+IMP: ShabdKosh will always be accessible to Users. All words with there respective meanings will be displayed, and with time we will also provide 
+there dhatu or the root of the word and there upasarga and visarga.
+
+2nd Folder: vish
+vish is short for Lord Vishnu or Vishnu Dev who is the 2nd deity of the Hindu Trimurti.
+Vishnu is responsible for the order of the universe.He is also called as "The Operator" of the universe. 
+Brahma spranged from the Lotus navel of lord Vishnu and for every universe, a new and separate Brahma is created for generartion of Life.
+
+Hence, Vishnu will be responsible for operating Communities witten the Platform.
+We will have 2 options for users, one is to create a Community for people with like minded interests and other is for joining a community of 
+people with similar interests as user.
+
+3rd Folder: shiv
+Shiv is short for Lord Shiva or Mahadev and he is the supreme deity as well as the 3rd deity of Hindu Trimurti.
+Shiva is responsible for Destruction of the Universe and he destroys an universe upon the completion of its cycle and wish of Mahadev.
+
+As mahadev decides which universe to destroy and which universe to keep for further function of life,
+we have unanomously decided to inspire from his wisdom and channelise it as User Authentication.
+
+All User Log In, Log Out and User Profile functions will be controlled through this folder.
+In the near term, possibly next year, we will have a 3d Virtual Interactive Tree where users will be able to track all there contents and progress in it.
+
+Suppose a user has 100 words, 15 articles and 10 videos which he needs to store for further use.
+So a user can create multiple branches in his interactive tree and place his content upon his choice and freedom.
+
+If you observe closely, The first three letter of the function of devas are "Generator","Creator" & "Destroyer" which sums up to GOD.
+Is this a mere coincidence or was it by design? I leave the decision to you.
+
+
+
+Now, let's consider how HTML files are decided and used.
+In the templates folder, we have 3 additional folder.
+
+1. Community Folder: In the community folder we have the make and join html files for communities. Here we have the Login and Signup page for user.
+
+2. Content Folder: In the content folder, we have 5 html files.
+1 for Shabdkosh, 2 for Blogs and all written stuff, 3 is for Videos and Audios.
+
+{ 
+    Added on 24-08-2022 @ 6:30AM
+We have decided to add 2 new HTML files and features for our website.
+
+1 new html file is for panchang which will be displayed on the website.
+Panchang will be displayed below NAVBAR with some margin for aesthetics.
+
+1 new html file if for a new feature we have built into this project: WALL OF Q & A.
+Wall of Q & A is a separate feature which will have 1 line questions and answers in the SUTRA Style.
+1 line questions and 1 line answers. Under 15-10 words.
+
+}
+
+3. Home Folder: This folder is for homepage and base html files. 
+In the homepage, we have our homepage tree art and marketing taglines.
+Along with this for shabdkosh, we have 8 words in cascaded carousel types.
+
+For Blogs, we have 5 top blogs as free content for visitors.
+
+For AV, we have 3 most watched videos and audio content for visitors.
+
+Base html file is for function in wesbites which is common for every html files.
+Ex. Nav Bar in header, and contact info in Footer. And also possible background textures for aesthetics.
+
+In the Static folder, we will have all images and textures through which we design our website including css and javascript.
+
+Note: 
+New Update for additional files created over last 3 weeks. 03-/08---24/08 @ 7:00AM.
+
+In the static folders, we have made some changes.
+We have created 3 sub folders for css,js and images.
+
+In the Css folders, all css files are stored for each individual component on the homepages and rest of HTMLs.
+In the js folders, all js files are stored for each individual component on the homepages and rest of HTMLs.
+
+We have started saving all images in img folders for ease of use and clean code. Everything should be svach and organised for efficiency.
+
+
+In the templates folders, 3 new html files have been added.
+ 1. base.html is added for Header and Footer of the project. This files will be common for all htmls.
+
+ 2. carousel.html: This files is responsible for the 1st carousel we have for shabdkosh in our homepage.
+
+ 3. Index.html: This file is our homepage html file. All files and css and js are exported to this file through {Block Content feature}.
+ IN index.html: 1 css files is called for styling components of index file. This component is shown as 4 shlokas next to RISHIVAR and shishya.
+
+Another file which is called into index is carousel.html, this files contains slider css for shabdkosh carousel.
+
+Another 2 files will be called for blogs and audio/videos each through same features used in shabdkosh carousel.
+
+
+
+////   Problem we faced and struggled at /// on 23/08.
+
+start--
+
+We came across a problem for uploading our images from static folder using {Load Static} function. Currently, we have manually added these files]
+but for future use and maintaining efficiency we have to load this files automatically from static.
+For the current development phase, adding manually is not a problem but when we host the website on server, we have to add this features through
+static_urls features by adding images files on server and routing them to the platform for user view.
+
+-- end.
+
+Progress Report @04-09-2022
+Progress of Each and Every Page is Explained as well as Pending Important tasks.
+
+HomePage:
+
+****Document Submitted to Pallav for checking IPR rights. Logo was designed, domain was bought in January and IPR pdf was given on 1st Sep.***
+
+
+1. Header is Completed. Logo and name is perfectly aligned. We need to figure out 10px margin in pogo div and remove it.
+    IN responsive, we have trouble with hamburger button. It moves left when clicked in XR.
+
+
+2. Footer structure is Completed. Needs change of words, contact info needs change and quick links needs update.
+Might add few more functionality in future.
+
+3.Background needs to be designed with help from Aastikya.
+
+4.Top right container is done.
+We can add more appeasing line for users if needed.
+
+5. Slider is completed. For now images have been added.In future, every 3 days, new images with new shlokas will be added.
+
+6. Kosh Carousel has been added. It needs to be more aligned to the right and we need to make it a bit smaller for 768 Px screens.
+
+7. Articles Carousel has been added. It's functioning perfectly with some minor tweaks in next button.
+
+8. Shabdkosh html page has been designed. We just need to add words in it from excel files.
+
+9. Articles html page has been designed. We need to write the content of the articles.Images has been uploaded. We have also added bullet Style
+shlokas,strotams and sutras tab. It will be image specific.
+
+10. Audio/Chants page is Pending. It needs to be designed based on similar historical platforms.
+
+11. Wall of Q and A has been built. We need to add more content according to random topics.
+
+12. Community needs to be built and will be a app centric feature for gyaandweep.
+
+13. Vision has been built and perfectly displayed. We just need to add the top blog.
+
+14. Profile and Log In page has been built. Maybe some design changes in the future is needed.
+
+Progress Report @25-09-2022.
+
+1. Header is fully designed and functional for laptops and 768px screen sizes mobile phones.
+2. Footer is also complete with some hyperlinkls and text updates.
+    Homepage is complete for 768 px sizes, some tag lines are needed.
+    We need to prepare the background art within september.
+
+
+3. In learn tab,
+    Shabdkosh is still incomplete and needs immediate attention.
+    If dynamically rendering is not possible, hardcode it. In next iteration, change it.
+
+    Articles page is well built and fully functional for 1680 and 768 px sizes.
+    We still haven't found a solution to make it digitally render, needs attention.
+
+    Chants page structure is also completed. Needs good content, can be hardoced for 1st iteration.
+
+4. Wall of Q and A is complete for 1680 and 768 px screen sizes.
+    Many more questions needs to be added.
+
+5. Community is a feature which will be app based and needs attention in later months.
+
+6. About us page is also complete for 1680 and 768 px sizes.Just top line need to be added.
+
+7. Profile list is added with 3 2 new html pages.
+    1 is Profile where we perform analytics of users data and inputs.
+    2. User settings page is made for profile updates, TOC and Rules.   Logout button is added.
